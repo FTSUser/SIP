@@ -1,0 +1,22 @@
+@import "./typogrphic.scss";
+@import "./mixin.scss";
+@import "./color.scss";
+
+@mixin medium-button {
+    padding: 12px 24px;
+    background: $primary;
+    @include text;
+    border-radius: 4px;
+    &:hover {
+        color: #fff;
+    }
+}
+@mixin medium-buttons {
+    padding: 12px 24px;
+    background: $white;
+    @include text;
+    border-radius: 4px;
+    &:hover {
+        color: $primary;
+    }
+}

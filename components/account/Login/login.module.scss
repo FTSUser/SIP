@@ -1,0 +1,73 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+
+.loginCard {
+    background-color: $white;
+    color: $primary;
+    @include white-shadow-md();
+    max-width: 900px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    border-radius: 16px;
+    form {
+        button {
+            @include medium-button();
+            width: 100%;
+            border: none;
+            color: $white;
+        }
+    }
+}
+
+.loginCardBoxOne {
+    width: 40%;
+    padding: 40px;
+    border-right: 1px solid #d1d9e6;
+}
+.loginCardBox {
+    width: 60%;
+    padding: 40px;
+    // background-color: $background;
+    // color: $white;
+}
+
+.Signup {
+    color: $primary;
+}
+.logo {
+    @include heading();
+    @extend .Signup;
+}
+.welcomeHeading {
+    @extend .logo;
+}
+.welcomeSubHeading {
+    @include text();
+}
+.welcome {
+    @include flex-center();
+    height: 100%;
+}
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .loginCardBoxOne {
+        width: 100%;
+        padding: 40px;
+    }
+    .Signup {
+        color: $primary;
+    }
+    .loginCardBox {
+        width: 100%;
+        padding: 40px;
+        background-color: $white;
+        color: $primary;
+    }
+    .loginCard {
+        display: block;
+    }
+}

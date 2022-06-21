@@ -1,0 +1,38 @@
+@mixin text {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+@mixin heading {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: bold;
+}
+@mixin medium {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 500;
+}
+@mixin heading-6 {
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    line-height: 32px;
+    font-weight: 400;
+}
+
+@mixin heading-1 {
+    font-size: 50px;
+    line-height: 55px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+}
+
+
+@mixin text-sm {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}

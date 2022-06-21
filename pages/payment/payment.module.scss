@@ -1,0 +1,109 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+.borderRadius {
+    background-color: brown;
+    border-radius: 5px;
+    width: max-content;
+    padding: 10px;
+}
+.cards {
+    background-color: $primary !important;
+
+    -webkit-box-shadow: 0 0 30px #d1d9e680;
+    box-shadow: 0 0 30px #d1d9e680;
+    border-radius: 5px;
+    padding: 22px;
+    border: none;
+}
+.mainButton {
+    @include medium-button();
+    border: none;
+    color: $white;
+    line-height: 15px !important;
+    margin: 10px 0;
+}
+.mainButtons {
+    @include medium-buttons();
+    border: none;
+    color: $primary;
+    line-height: 15px !important;
+    margin: 10px 0;
+}
+
+.customModel {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .modelDesign {
+        width: 30%;
+        background-color: $white;
+        padding: 20px;
+        border-radius: 5px;
+
+        .modelHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+}
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.cardBoxAlign {
+    @include flex-betwwen-without-center();
+    padding: 5px 0;
+    font-weight: bold;
+
+    span {
+        font-weight: 500;
+    }
+}
+.heading {
+    font-weight: bold;
+
+    padding: 8px 0;
+    span {
+        font-weight: 500;
+    }
+}
+.Cenetr {
+    position: absolute;
+    top: -20px;
+    right: 40%;
+}
+.circle {
+    background: $primary;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #193566;
+    color: $white;
+    line-height: 40px;
+    text-align: center;
+}
+
+.cardGrid {
+    display: grid;
+    margin: 3rem 0 0 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    .cardGridItems {
+        padding: 20px;
+        position: relative;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+}

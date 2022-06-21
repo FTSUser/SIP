@@ -1,0 +1,284 @@
+@import "../components/Assets/sass/mixin.scss";
+@import "../components/Assets/sass/color.scss";
+@import "../components/Assets/sass/common.scss";
+@import "../components/Assets/sass/typogrphic.scss";
+
+.globalCenter {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.centerAlignBox {
+    height: calc(100vh - 25px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+.sidebar {
+    position: fixed;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 280px;
+    max-height: 100vh;
+    height: 100%;
+    box-shadow: 10px 0 30px #97a7c31a;
+    background-color: #fff;
+}
+
+.sidebarSub {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.appBar {
+    width: calc(100% - 280px);
+    margin-left: 280px;
+    transition: 0.3s ease-in-out;
+    background: #f3f7fc;
+    position: absolute;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+   
+    max-height: 100vh;
+    height: 100%;
+    box-shadow: 10px 0 30px #97a7c31a;
+    background-color: #fff;
+}
+.hideAppbar {
+    // max-width: 100%;
+    width: calc(100% - 100px);
+    transition: 0.3s ease-in-out;
+    margin-left: 80px;
+    position: absolute;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+   
+    max-height: 100vh;
+    height: 100%;
+    box-shadow: 10px 0 30px #97a7c31a;
+    background-color: #fff;
+
+}
+.sidebarHidden {
+    width: 0px;
+    height: 0px;
+
+    // 
+   
+    width: 80px;
+    max-height: 100vh;
+    height: 100%;
+    box-shadow: 10px 0 30px #97a7c31a;
+    background-color: #fff;
+    .sidebarSub {
+        .sidebars {
+            .dashboardIcon {
+                .dashboardText {
+                    display: none;
+                }
+            }
+
+        }
+        .alignsidebar {
+            height: 70px;
+
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
+.header {
+    z-index: 11;
+    position: sticky;
+    max-width: 100%;
+    top: 0;
+
+    padding: 20px;
+    max-width: 100%;
+    box-shadow: 10px 0 30px #97a7c31a;
+    background-color: #fff;
+    .menuRightAlign {
+        display: flex;
+        justify-content: space-between;
+        p {
+            cursor: pointer;
+        }
+        .logo {
+            i {
+                font-size: 30px;
+            }
+        }
+        .logout {
+            font-size: 30px;
+            cursor: pointer;
+        }
+    }
+}
+.logoMin {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+}
+.sidebar {
+    .sidebarSub {
+        .alignsidebar {
+            .logoMin {
+                display: none;
+            }
+        }
+    }
+}
+.sidebars {
+    .dashboardIcon {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        cursor: pointer;
+        @include medium();
+        .notActive {
+            @include flex-items-center();
+            .dashboardText,
+            i {
+                color: $primary;
+            }
+            i {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .active {
+            @include flex-items-center();
+            .dashboardText,
+            i {
+                color: $blue;
+            }
+            i {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+    // .dashboardIcon:hover {
+    //     background: $primary;
+    //     .dashboardText,
+    //     i {
+    //         color: $background;
+    //     }
+    // }
+}
+
+.alignsidebar {
+    padding: 20px;
+    @include flex-between();
+    .logo {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: bold;
+    }
+    .close {
+        i {
+            font-size: 30px;
+        }
+    }
+}
+.sidebar  {
+    .sidebarSub {
+        .alignsidebar {
+            i {
+                display: none;
+            }
+        }
+    }
+}
+.sidebarHidden  {
+    .sidebarSub {
+        .alignsidebar {
+            i {
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 0px) and (max-width: 768px) {
+    .sidebarHidden {
+        .sidebarSub {
+            .alignsidebar {
+                i {
+                    display: block !important;
+                }
+            }
+        }
+    }
+    .appBar {
+        margin-left: 0;
+        width: 100%;
+    }
+    .sidebar{
+        width: 100%;
+        transform: translateX(-100%);
+        transition: .3s ease-in-out;
+    }
+    .hideAppbar {
+        width: 100%;
+        margin: 0;
+    }
+    .sidebarHidden {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: translateX(0%);
+        transition: .3s ease-in-out;
+        z-index: 999999999;
+        height: 100%;
+    }
+    .sidebarSub {
+        .sidebars {
+            .dashboardIcon {
+                .dashboardText {
+                    display: block !important;
+                }
+            }
+
+        }
+        .alignsidebar {
+            height: 70px;
+            .logoMin {
+                display: none;
+            }
+            .logo {
+                display: block !important;
+            }
+        }
+    }
+
+}
+.alignLogout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

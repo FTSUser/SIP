@@ -1,0 +1,36 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+
+.mainButton {
+    @include medium-button();
+    border: none;
+    color: $white;
+}
+.widthTD {
+    width: 40%;
+    width: 40%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.green {
+    color: green;
+}
+.alignEnd {
+    text-align: end;
+}
+.maxwidth{
+    max-width: 110px;
+}
+@media(max-width: 768px) {
+    .mainButton {
+        padding: 10px !important;
+        min-width: fit-content;
+      }
+}
+.red{
+    color: red;
+}

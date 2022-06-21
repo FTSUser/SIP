@@ -1,0 +1,70 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+
+.heading {
+    font-weight: bold;
+
+    padding: 8px 0;
+    span {
+        font-weight: 500;
+    }
+}
+.Cenetr {
+}
+.circle {
+    background: $primary;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #193566;
+    color: $white;
+    line-height: 40px;
+    text-align: center;
+}
+
+.group{
+    button{
+       
+        margin-top: 20px;
+        background-color: $primary;
+        @include text-sm;
+        border: none;
+        padding: 8px 16px;
+        color: $white;
+        min-width: 160px;
+        height: 50px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-right: 20px;
+    }
+    .rightButton{
+        position: absolute;
+        bottom: 20px;
+        margin-left: 20px;
+    }
+}
+.width50{
+    height: 500px;
+    border-radius: 10px;
+    background: #193566;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+.cardGrid {
+    display: grid;
+    margin: 1rem 0 0 0;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    .cardGridItems {
+        padding: 16px;
+        position: relative;
+        border: 1px solid;
+        border-radius: 5px;
+    }
+}
+

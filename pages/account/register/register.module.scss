@@ -1,0 +1,85 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+
+.loginCard {
+    background-color: $white;
+    color: $primary;
+    @include white-shadow-md();
+    max-width: 850px;
+    width: 850px;
+   
+    // max-height: calc(100vh - 100px);
+    overflow: auto;
+    overflow-x: hidden;
+    // overflow: hidden;
+    padding: 40px;
+    position: relative;
+    border-radius: 16px;
+    form {
+        button {
+            @include medium-button();
+            width: 100%;
+            border: none;
+            color: $white;
+        }
+    }
+}
+
+
+.Signup {
+    color: $primary;
+}
+.logo {
+    @include heading();
+    text-align: center;
+    @extend .Signup;
+}
+.welcomeHeading {
+    @extend .logo;
+}
+.welcomeSubHeading {
+    @include text();
+}
+.welcome {
+    @include flex-center();
+    height: 100%;
+}
+
+.cusFormGrid {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 10px 30px;
+    padding: 4rem 0 0 0;
+}
+
+.resiterButtonDesign {
+    padding: 2rem 0;
+}
+
+
+@media (min-width: 0px) and (max-width: 768px) {
+    .loginCardBoxOne {
+        width: 100%;
+        padding: 10px;
+    }
+    .Signup {
+        color: $primary;
+    }
+    .loginCardBox {
+        width: 100%;
+        padding: 10px;
+        background-color: $white;
+        color: $primary;
+    }
+    .loginCard {
+        display: block;
+        width: auto;
+        max-width: auto;
+    }
+    .cusFormGrid {
+        display: grid;
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}

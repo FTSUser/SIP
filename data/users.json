@@ -1,0 +1,20 @@
+[
+    {
+        "firstName": "dddvd",
+        "lastName": "vdvd",
+        "username": "1",
+        "hash": "$2a$10$qYw/USvpII93mGRs5ZZ/xucaQoV5iEx4vYFNDRxqQq95HskAboLLq",
+        "id": 1,
+        "dateCreated": "2021-12-11T11:24:13.607Z",
+        "dateUpdated": "2021-12-11T11:24:13.607Z"
+    },
+    {
+        "firstName": "dddvd",
+        "lastName": "vdvd",
+        "username": "parag",
+        "hash": "$2a$10$qa6Uym20cy1qO3EEzzwpCeAMlyXJTk258qXXe0hr9nTg6qMasZ3hq",
+        "id": 2,
+        "dateCreated": "2021-12-11T12:40:29.934Z",
+        "dateUpdated": "2021-12-11T12:40:29.934Z"
+    }
+]

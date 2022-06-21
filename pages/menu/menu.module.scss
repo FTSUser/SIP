@@ -1,0 +1,27 @@
+@import "/components/Assets/sass/mixin.scss";
+@import "/components/Assets/sass/color.scss";
+@import "/components/Assets/sass/common.scss";
+@import "/components/Assets/sass/typogrphic.scss";
+
+.mainButton {
+    @include medium-button();
+    border: none;
+    color: $white;
+}
+.widthTD {
+    width: 40%;
+    width: 40%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.true {
+    color: green;
+}
+.false {
+    color: #193566;
+}
+.alignEnd {
+    text-align: end;
+}
